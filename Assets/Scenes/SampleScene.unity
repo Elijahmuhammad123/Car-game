@@ -134,6 +134,8 @@ GameObject:
   - component: {fileID: 72328655}
   - component: {fileID: 72328658}
   - component: {fileID: 72328659}
+  - component: {fileID: 72328661}
+  - component: {fileID: 72328660}
   m_Layer: 0
   m_Name: body
   m_TagString: Untagged
@@ -220,7 +222,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 72328654}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.08, y: 0.59, z: 0}
+  m_LocalPosition: {x: 0.15, y: 0.59, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1224656722}
@@ -483,7 +485,55 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Wheel_f: {fileID: 1229890249}
   Wheel_b: {fileID: 1031489739}
-  power: 3
+  power: 5
+--- !u!235 &72328660
+WheelJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 72328654}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 1031489739}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 1
+  m_Anchor: {x: 1.8100001, y: -1.95}
+  m_ConnectedAnchor: {x: 0, y: 0}
+  m_Suspension:
+    m_DampingRatio: 0.7
+    m_Frequency: 2
+    m_Angle: 90
+  m_UseMotor: 0
+  m_Motor:
+    m_MotorSpeed: 0
+    m_MaximumMotorForce: 10000
+--- !u!235 &72328661
+WheelJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 72328654}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 1229890249}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 1
+  m_Anchor: {x: -1.85, y: -1.8399999}
+  m_ConnectedAnchor: {x: -0.0000000020372148, y: -0.000000011587687}
+  m_Suspension:
+    m_DampingRatio: 0.7
+    m_Frequency: 2
+    m_Angle: 90
+  m_UseMotor: 0
+  m_Motor:
+    m_MotorSpeed: 0
+    m_MaximumMotorForce: 10000
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -551,7 +601,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 15
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -576,7 +626,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 49.1, y: 43.93, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -609,48 +659,85 @@ EdgeCollider2D:
   m_GameObject: {fileID: 737625941}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 1804fb5fa2a089a4a9873765c8376f0e, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -44.039497, y: 2.1282883}
-  - {x: -44.039497, y: 2.1282883}
-  - {x: -41.37287, y: 1.6869016}
-  - {x: -39.419914, y: 1.3803209}
-  - {x: -38.085697, y: 1.1797886}
-  - {x: -36.56844, y: 0.9602177}
-  - {x: -34.909737, y: 0.730952}
-  - {x: -33.1513, y: 0.5013366}
-  - {x: -31.334877, y: 0.2807169}
-  - {x: -29.502398, y: 0.07843459}
-  - {x: -27.695997, y: -0.096179724}
-  - {x: -25.958218, y: -0.23382881}
-  - {x: -24.33234, y: -0.3253094}
-  - {x: -22.86319, y: -0.36170143}
-  - {x: -21.578922, y: -0.3341403}
-  - {x: -20.898796, y: -0.30685192}
-  - {x: -17.826513, y: -0.2074129}
-  - {x: -13.104301, y: -0.06514716}
-  - {x: 3.641319, y: 0.42403737}
-  - {x: 7.7386656, y: 0.5460026}
-  - {x: 9.579069, y: 0.6048356}
-  - {x: 10.22503, y: 0.6911578}
-  - {x: 11.083387, y: 0.8895706}
-  - {x: 12.160067, y: 1.1986408}
-  - {x: 13.389065, y: 1.5943482}
-  - {x: 14.725281, y: 2.0567775}
-  - {x: 16.126358, y: 2.566338}
-  - {x: 17.635015, y: 3.1361995}
-  - {x: 18.958614, y: 3.6493769}
-  - {x: 20.308628, y: 4.1843567}
-  - {x: 21.560793, y: 4.689398}
-  - {x: 22.674915, y: 5.1453533}
-  - {x: 24.328533, y: 5.8335094}
-  - {x: 24.949722, y: 6.096331}
-  - {x: 26.311668, y: 6.675577}
+  - {x: -44.175568, y: 8.948057}
+  - {x: -44.175568, y: 8.948057}
+  - {x: -41.60265, y: 8.908221}
+  - {x: -38.839317, y: 8.877118}
+  - {x: -36.137398, y: 8.859466}
+  - {x: -34.45347, y: 8.855474}
+  - {x: -33.05182, y: 8.85617}
+  - {x: -31.446724, y: 8.863085}
+  - {x: -29.843685, y: 8.8773985}
+  - {x: -28.275497, y: 8.9003725}
+  - {x: -26.712376, y: 8.93523}
+  - {x: -25.375828, y: 8.977243}
+  - {x: -24.17531, y: 9.030677}
+  - {x: -23.791443, y: 9.151397}
+  - {x: -22.958458, y: 9.557732}
+  - {x: -21.782055, y: 10.210682}
+  - {x: -20.347645, y: 11.057528}
+  - {x: -18.716805, y: 12.053237}
+  - {x: -16.946384, y: 13.154833}
+  - {x: -15.091707, y: 14.320082}
+  - {x: -13.207455, y: 15.507101}
+  - {x: -11.142885, y: 16.801529}
+  - {x: -9.566847, y: 17.780075}
+  - {x: -7.917514, y: 18.783535}
+  - {x: -6.451496, y: 19.644325}
+  - {x: -5.215519, y: 20.324203}
+  - {x: -4.232036, y: 20.792465}
+  - {x: -3.4409623, y: 21.005465}
+  - {x: -2.7172823, y: 20.879244}
+  - {x: -1.8232807, y: 20.554108}
+  - {x: -0.68702525, y: 20.07304}
+  - {x: 0.6789427, y: 19.460514}
+  - {x: 3.9469185, y: 17.962322}
+  - {x: 5.783289, y: 17.131508}
+  - {x: 7.642173, y: 16.312857}
+  - {x: 9.53858, y: 15.51255}
+  - {x: 11.406727, y: 14.772163}
+  - {x: 13.199756, y: 14.124571}
+  - {x: 14.868759, y: 13.602636}
+  - {x: 16.36053, y: 13.238604}
+  - {x: 17.612171, y: 13.061179}
+  - {x: 18.542503, y: 13.081661}
+  - {x: 18.86262, y: 13.199724}
+  - {x: 19.529537, y: 13.5357}
+  - {x: 20.458557, y: 14.056969}
+  - {x: 21.993134, y: 14.957058}
+  - {x: 22.907606, y: 15.497498}
+  - {x: 24.36188, y: 16.349043}
+  - {x: 25.929863, y: 17.24497}
+  - {x: 27.583134, y: 18.15348}
+  - {x: 29.293816, y: 19.04296}
+  - {x: 31.034615, y: 19.881878}
+  - {x: 32.779022, y: 20.638733}
+  - {x: 34.5017, y: 21.281796}
+  - {x: 36.179146, y: 21.778656}
+  - {x: 37.790627, y: 22.094906}
+  - {x: 39.28804, y: 22.19128}
+  - {x: 41.90217, y: 22.094051}
+  - {x: 45.49623, y: 21.8918}
+  - {x: 49.92727, y: 21.601791}
+  - {x: 55.02591, y: 21.241154}
+  - {x: 60.62098, y: 20.827076}
+  - {x: 66.5408, y: 20.376787}
+  - {x: 72.61336, y: 19.907492}
+  - {x: 84.5284, y: 18.980839}
+  - {x: 90.02647, y: 18.557947}
+  - {x: 94.98833, y: 18.185024}
+  - {x: 99.241104, y: 17.879343}
+  - {x: 102.61035, y: 17.658249}
+  - {x: 104.91148, y: 17.539295}
+  - {x: 105.99387, y: 17.538414}
+  - {x: 107.364555, y: 17.528889}
 --- !u!114 &737625943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -666,7 +753,7 @@ MonoBehaviour:
   m_Spline:
     m_IsOpenEnded: 1
     m_ControlPoints:
-    - position: {x: -42.217407, y: 1.0754445, z: 0}
+    - position: {x: -42.217407, y: 8.177261, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
@@ -675,28 +762,46 @@ MonoBehaviour:
       bevelSize: 0
       spriteIndex: 0
       corner: 1
-    - position: {x: -21.55621, y: -1.0737917, z: 0}
-      leftTangent: {x: -5.9979973, y: -0.3173623, z: 0}
-      rightTangent: {x: 1.7784557, y: 0.09410018, z: 0}
+    - position: {x: -24.071577, y: 8.294561, z: 0}
+      leftTangent: {x: -5.9979916, y: -0.31736088, z: 0}
+      rightTangent: {x: 1.7784595, y: 0.09410095, z: 0}
       mode: 1
       height: 1
       bevelCutoff: 0
       bevelSize: 0
       spriteIndex: 0
       corner: 1
-    - position: {x: 9.63978, y: -0.13266967, z: 0}
-      leftTangent: {x: -1.8199034, y: -0.075811625, z: 0}
-      rightTangent: {x: 2.899434, y: 0.12076503, z: 0}
+    - position: {x: -3.4086747, y: 20.266169, z: 0}
+      leftTangent: {x: -1.8199053, y: -0.07581711, z: 0}
+      rightTangent: {x: 1.5449694, y: 0.06434631, z: 0}
       mode: 1
       height: 1
       bevelCutoff: 0
       bevelSize: 0
       spriteIndex: 0
       corner: 1
-    - position: {x: 25.23935, y: 5.4153643, z: 0}
-      leftTangent: {x: 0, y: 0, z: 0}
+    - position: {x: 18.675482, y: 12.353706, z: 0}
+      leftTangent: {x: -4.834301, y: -0.76337814, z: 0}
+      rightTangent: {x: 1.6954231, y: 0.26749325, z: 0}
+      mode: 1
+      height: 1
+      bevelCutoff: 0
+      bevelSize: 0
+      spriteIndex: 0
+      corner: 1
+    - position: {x: 39.297783, y: 21.451345, z: 0}
+      leftTangent: {x: -6.717186, y: 0.12797356, z: 0}
+      rightTangent: {x: 10.026409, y: -0.19064903, z: 0}
+      mode: 1
+      height: 1
+      bevelCutoff: 0
+      bevelSize: 0
+      spriteIndex: 0
+      corner: 1
+    - position: {x: 105.99311, y: 16.798416, z: 0}
+      leftTangent: {x: -2.1587906, y: -0.32014275, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
-      mode: 0
+      mode: 2
       height: 1
       bevelCutoff: 0
       bevelSize: 0
@@ -763,8 +868,8 @@ SpriteShapeRenderer:
   m_Sprites:
   - {fileID: 21300000, guid: 925170b1353b8894fa9bc58552f01dbb, type: 3}
   m_LocalAABB:
-    m_Center: {x: -8.695568, y: 2.416939, z: -0.00005}
-    m_Extent: {x: 35.58648, y: 4.2586384, z: 0.00005}
+    m_Center: {x: 31.691448, y: 11.09564, z: -0.00005}
+    m_Extent: {x: 75.89021, y: 11.09564, z: 0.00005}
 --- !u!4 &737625945
 Transform:
   m_ObjectHideFlags: 0
@@ -773,7 +878,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 737625941}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.097, y: -5.671, z: -0.691397}
+  m_LocalPosition: {x: 36.1, y: -13.8, z: -0.691397}
   m_LocalScale: {x: 1.0727949, y: 1.1155021, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -790,8 +895,8 @@ GameObject:
   - component: {fileID: 1031489737}
   - component: {fileID: 1031489736}
   - component: {fileID: 1031489739}
-  - component: {fileID: 1031489738}
   - component: {fileID: 1031489735}
+  - component: {fileID: 1031489738}
   m_Layer: 0
   m_Name: Wheel_b
   m_TagString: Untagged
@@ -808,7 +913,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 1031489734}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 1804fb5fa2a089a4a9873765c8376f0e, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -873,36 +978,24 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1031489734}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.11, y: -1.04, z: -0.41701317}
+  m_LocalPosition: {x: 1.96, y: -1.36, z: -0.41701317}
   m_LocalScale: {x: 2.1718028, y: 1.9456116, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!235 &1031489738
-WheelJoint2D:
+--- !u!114 &1031489738
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1031489734}
   m_Enabled: 1
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 72328655}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 2.0309832, y: -1.6064272}
-  m_Suspension:
-    m_DampingRatio: 0.7
-    m_Frequency: 5
-    m_Angle: 90
-  m_UseMotor: 0
-  m_Motor:
-    m_MotorSpeed: 0
-    m_MaximumMotorForce: 10000
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2f0de327543856409a25297242575b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!50 &1031489739
 Rigidbody2D:
   serializedVersion: 4
@@ -1043,8 +1136,8 @@ GameObject:
   - component: {fileID: 1229890247}
   - component: {fileID: 1229890246}
   - component: {fileID: 1229890249}
-  - component: {fileID: 1229890248}
   - component: {fileID: 1229890245}
+  - component: {fileID: 1229890248}
   m_Layer: 0
   m_Name: Wheel_f
   m_TagString: Untagged
@@ -1061,7 +1154,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 1229890244}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 1804fb5fa2a089a4a9873765c8376f0e, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -1126,36 +1219,24 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1229890244}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.29, y: -1.04, z: -0.41701317}
+  m_LocalPosition: {x: -1.7, y: -1.25, z: -0.41701317}
   m_LocalScale: {x: 2.1718028, y: 1.9456116, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!235 &1229890248
-WheelJoint2D:
+--- !u!114 &1229890248
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1229890244}
   m_Enabled: 1
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 72328655}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -2.3694801, y: -1.606427}
-  m_Suspension:
-    m_DampingRatio: 0.7
-    m_Frequency: 5
-    m_Angle: 90
-  m_UseMotor: 0
-  m_Motor:
-    m_MotorSpeed: 0
-    m_MaximumMotorForce: 10000
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2f0de327543856409a25297242575b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!50 &1229890249
 Rigidbody2D:
   serializedVersion: 4
@@ -1187,9 +1268,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1760687851}
   - component: {fileID: 1760687850}
+  - component: {fileID: 1760687852}
   m_Layer: 0
   m_Name: Respawn
-  m_TagString: Untagged
+  m_TagString: Respawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1234,3 +1316,15 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1760687852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1760687849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2f0de327543856409a25297242575b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
